@@ -57,6 +57,8 @@ h6 {
     margin-bottom: 2.33em;
 }
 
+
+
 /* header */
 .header {
     height: 10.2rem;
@@ -66,7 +68,7 @@ h6 {
     align-items: center;
 }
 
-.logo img {
+.header .logo img {
     width: 25.6rem;
     height: 5.4rem;
 }
@@ -117,7 +119,8 @@ h6 {
 
 .introduction {}
 
-.main-wraper {
+
+.introduction .main-wraper {
     max-width: 113rem;
     margin: 0 auto;
     display: flex;
@@ -127,7 +130,7 @@ h6 {
 
 .main-text {}
 
-.main-text__underline {
+.introduction .main-text__underline {
     font-size: 2.5rem;
     font-weight: 500;
     border-bottom: 1px solid;
@@ -135,34 +138,102 @@ h6 {
     margin-bottom: 3rem;
 }
 
-.main-text__title-lg {
+.introduction .main-text__title-lg {
     font-size: 7rem;
     font-weight: 900;
     margin-bottom: 3rem;
 }
 
-.main-text__title-md {
+.introduction .main-text__title-md {
     font-size: 2.1rem;
     font-weight: 700;
     margin-bottom: 3rem;
 }
 
-.main-text__desc {
+.introduction .main-text__desc {
     font-size: 2.1rem;
     font-weight: 300;
 }
 
-.main-image {
+.introduction .main-image {
     position: absolute;
     right: -46px;
     top: 0;
 }
 
-.main-image__img {}
+.circel-yellow_border {
+    opacity: 0.23;
+    width: 18rem;
+    left: -26rem;
+    top: 4rem;
+    height: 18rem;
+    border: 4rem solid #ffe600;
+    border-radius: 50%;
+}
+
+.pattern.circel-gray {
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    width: 2.1rem;
+    height: 2.1rem;
+    top: 5rem;
+    left: 35.5rem;
+}
+
+.pattern.circel-blue {
+    background-color: #eff8fb;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    top: 60rem;
+    left: -18.5rem;
+}
+
+.pattern.circel-yellow {
+    background-color: #ffe600;
+    display: block;
+    border-radius: 50%;
+    width: 7.8rem;
+    height: 7.8rem;
+    top: 46rem;
+    left: 83rem;
+    opacity: 0.44;
+    z-index: 1;
+}
+
+.pattern.square-border {
+    width: 9.2rem;
+    height: 9.2rem;
+    top: 50rem;
+    left: 31rem;
+    border: 2rem solid #c8aed1;
+    transform: rotate(-115deg);
+    opacity: 0.23;
+    border-radius: 12%;
+}
+
+.pattern.square {
+    background-color: #e93a76;
+    transform: rotate(115deg);
+    border-radius: 12%;
+    width: 6.8rem;
+    height: 6.8rem;
+    top: 15rem;
+    left: 113.5rem;
+    opacity: 0.44;
+    z-index: 1;
+}
+
+
+.introduction .main-image__img {}
 
 /* general */
+.pattern {
+    position: absolute;
+    z-index: -1;
+}
 .use,
-.pay, 
+.pay,
 .features,
 .questions {
     padding-top: 5rem;
@@ -292,6 +363,8 @@ h6 {
     right: 9rem;
 }
 
+
+
 /* pay */
 .pay {}
 
@@ -341,13 +414,10 @@ h6 {
 }
 
 /* features */
-.features {
-
-}
+.features {}
 
 .features__content {
     position: relative;
-    
 }
 
 .features-wrap {
@@ -401,7 +471,7 @@ h6 {
     height: 0.2rem;
     background: #1877f2;
     position: absolute;
-    left: 50%;    
+    left: 50%;
     bottom: -3.5rem;
     transform: translateX(-50%);
 }
@@ -476,11 +546,9 @@ h6 {
     font-weight: 300;
 }
 
-.banner-contact__form .action {
+.banner-contact__form .action {}
 
-}
-
-.banner-contact__form .action a{
+.banner-contact__form .action a {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -522,10 +590,11 @@ h6 {
     order: 2;
 }
 
-/* .review-item:last-child .review-avatar .customer {
+.review-item:last-child .review-avatar .customer {
     right: 0;
     transform: translateX(50%);
-} */
+    left: unset;
+}
 
 .review-detail {
     font-size: 2.2rem;
@@ -591,19 +660,185 @@ h6 {
     text-align: center;
 }
 
-
-
-
 .questions {}
 
 .section-tittle-question {
     font-size: 10.8rem;
 }
 
-.banner {}
+.questions__content {}
+
+.questions__item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.question::before {
+    content: "Q";
+    position: absolute;
+    background-color: #232323;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+    left: 2rem;
+    top: 2rem;
+    font-family: "Overpass";
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    padding: 3rem 2rem 3rem 9rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions__item.active .icon-hide {
+    display: none;
+}
+
+.questions__item.active .icon-show {
+    display: block;
+}
+
+.icon-toggle .icon-hide {
+    display: block;
+}
+
+.icon-toggle .icon-show {
+    display: none;
+}
+
+.answer::before {
+    content: "A";
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    width: 5rem;
+    font-family: "Overpass";
+    height: 5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border-radius: 100%;
+    background-color: #e5e5e5;
+    ;
+    color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions__item.active .answer {
+    display: block;
+    height: 12rem;
+}
+
+.answer {
+    height: 0;
+    position: relative;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    font-weight: 300;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+}
+
+.answer p {
+    padding: 3rem 1.7rem 3rem 9rem;
+}
+
+/* banner-bottom */
+.banner-bottom {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.banner-bottom .logo {
+    margin-bottom: 3rem;
+}
+
+.banner-bottom .logo img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-bottom__content {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.banner-bottom__content .action {
+    margin-top: 3rem;
+}
+
+.banner-bottom__content .action a {
+    background-color: #ec1550;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding-bottom: 0.1em;
+    border-radius: 10rem;
+    margin: 0 auto;
+    height: 7.3rem;
+    width: 36rem;
+}
+
+.banner-bottom__content .action img {
+    margin-left: 3rem;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 
 /* foooter */
-.footer {}
+.footer {
+    background-color: #1877f2;
+    color: #fff;
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+}
+
+.footer-menu a {
+    font-size: 1.8rem;
+    color: #fff;
+    display: block;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.footer-menu li {
+    background: url("../img/check.png") no-repeat;
+    list-style: none;
+    padding-left: 3.5rem;
+    margin-right: 5rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+}
 
 @keyframes send__link {
     0% {
